@@ -195,8 +195,6 @@ class HarlequinSqliteConnection(HarlequinConnection):
     @staticmethod
     def _short_column_type(raw_type: str) -> str:
         # first get the storage affinity for a type decl
-        if raw_type is None or raw_type == "":
-            affinity = ""
 
         typ = raw_type.lower()
         if "int" in typ:
